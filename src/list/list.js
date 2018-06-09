@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 export default class list extends Component {
   listMap() {
     return this.props.mock.map((value, i) => (
-      <li key={i}>
-        <input type="checkbox" />
-        {value.content}
-        <span>{this.dateFormatter(value.time)}</span>
+      <li key={i} className="list-group-item list-item">
+        <input type="checkbox" className="checkbox float-left" />
+        <p className="float-left">{value.content}</p>
+        <span className="float-right">{this.dateFormatter(value.time)}</span>
       </li>
     ));
   }
@@ -32,6 +32,6 @@ export default class list extends Component {
     return fmt;
   }
   render() {
-    return <ul>{this.listMap()}</ul>;
+    return <ul className="list-group">{this.listMap()}</ul>;
   }
 }

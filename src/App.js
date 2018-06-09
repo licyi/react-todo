@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Mock from './mock';
 import List from './list/list';
 import Add from './add/add';
+import 'bootstrap/dist/css/bootstrap.css';
+import './app.css';
 
 class App extends Component {
   constructor() {
@@ -15,7 +17,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <List mock={this.state.Mock} />
         <Add mock={this.state.Mock} onChange={this.onChange.bind(this)} />
       </div>

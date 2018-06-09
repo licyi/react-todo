@@ -13,10 +13,14 @@ export default class add extends Component {
   }
   render() {
     return (
-      <div>
-        <textarea value={this.props.textValue} onChange={this.change.bind(this)}
+      <div className="add-wrap">
+        <textarea rows="3" value={this.props.textValue} onChange={this.change.bind(this)} />
+        <input
+          type="button"
+          className="btn btn-group btn-primary float-right"
+          value={'确定'}
+          onClick={this.submit.bind(this)}
         />
-        <input type="button" value={'确定'} onClick={this.submit.bind(this)} />
       </div>
     );
   }

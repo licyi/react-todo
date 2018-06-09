@@ -1,0 +1,17 @@
+.checkbox {
+  vertical-align: middle;
+  margin: auto;
+  height: 25px;
+  padding: 0 5px 0 0;
+}
+.list-item {
+  text-indent: 20px;
+  overflow: hidden;
+}
+.add-wrap {
+  margin-top: 10px;
+}
+.add-wrap textarea {
+  width: 100%;
+  height: auto;
+}
