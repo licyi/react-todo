@@ -13,12 +13,12 @@ class App extends Component {
     };
   }
   onChange(mock) {
-    this.setState(mock);
+    this.setState({ Mock: mock });
   }
   render() {
     return (
       <div className="App container">
-        <List mock={this.state.Mock} />
+        <List mock={this.state.Mock} onChange={this.onChange.bind(this)} />
         <Add mock={this.state.Mock} onChange={this.onChange.bind(this)} />
       </div>
     );

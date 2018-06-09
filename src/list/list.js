@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 export default class list extends Component {
+  handleInputChange(i) {
+    this.props.mock[i].checked = !this.props.mock[i].checked;
+    this.props.onChange(this.props.mock);
+  }
+
   listMap() {
+    console.log(this.props.mock);
+
     return this.props.mock.map((value, i) => (
       <li key={i} className="list-group-item list-item">
-        <input type="checkbox" className="checkbox float-left" />
+        <input
+          type="checkbox"
+          className="checkbox float-left"
+          checked={value.checked}
+          onChange={this.handleInputChange.bind(this, i)}
+          index={i}
+        />
         <p className="float-left">{value.content}</p>
         <span className="float-right">{this.dateFormatter(value.time)}</span>
       </li>
